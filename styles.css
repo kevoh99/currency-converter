@@ -15,10 +15,14 @@ p {
 body {
   color: #fff;
   background: #eeeeee;
-  /* font: 16px/1.5 Roboto arial sans-serif; */
+  /* font: 16px/1.5 "Roboto" arial sans-serif; */
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
+}
+
+h1 h2 {
+  font-size: 2rem;
 }
 
 .container {
@@ -28,19 +32,39 @@ body {
   padding: 10px 5px;
 }
 
+.form-ctrl {
+  font-size: 1.3rem;
+  width: 90%;
+}
+
 .flexy {
   display: flex;
-  justify-content: flex-end;
+}
+
+#main-heading {
+  font-size: 1.5rem;
+  color: #000;
+  text-align: center;
+  /*background: #ff0;*/
+  margin: 10px 0 25px 0;
+}
+
+.main-text {
+  color: #000;
 }
 
 header {
-  background: #e96c4c;
-  min-height: 70px;
+  border-bottom: 3px solid #e96c4c;
+  background: #2d74b3;
+  min-height: 60px;
 }
 
 .main-sec {
-  background: #00ff00;
-  height: 400px;
+  /* background: #00ff00; */
+  /*background: url("https://www.beautyhealthplus.org/temp/trading-chart2.png")
+    no-repeat -200px 0px;*/
+  background: #b4c6f0;
+  min-height: 350px;
 }
 
 .social {
@@ -57,7 +81,9 @@ header {
   /* background: #eb347d; */
   /*background: #999;*/
   background: #e96c4c;
-  height: 50px;
+  background: #323232;
+  border-top: 1px solid #999999;
+  min-height: 50px;
   font-size: smaller;
   /* text-align: center; */
 }
@@ -92,7 +118,6 @@ header {
   color: #fff;
   /*background: #ffff00;*/
   padding: 5px 5px;
-  margin: 0;
   font-weight: bold;
 }
 
@@ -105,7 +130,7 @@ header {
 .rounded {
   width: 50px;
   height: 50px;
-  border: 2px solid #e96c4c;
+  border: 2px solid #ffffff /*#e96c4c*/;
   border-radius: 50%;
   text-align: center;
   padding-top: 6px;
@@ -152,8 +177,25 @@ header {
   font-weight: bold;
 }
 
+.amount {
+  /*background: #f0f;*/
+  padding: 0 10px;
+  margin-bottom: 0;
+  color: #000;
+}
+
+#cash-count {
+  margin: 0 10px 5px 5px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  /* background: #ff00ff; */
+}
+
 #currency-at-hand {
   margin: 20px 10px 5px 5px;
+  margin: 3px 10px 5px 5px;
   padding: 5px;
   border: none;
   border-radius: 10px;
@@ -170,12 +212,7 @@ header {
   /*background: #ff00ff;*/
 }
 
-.form-ctrl {
-  font-size: 1.3rem;
-  width: 90%;
-}
-
-#btn-1 {
+.btn-1 {
   margin: 5px 10px 10px 5px;
   width: 200px;
   padding: 5px;
@@ -186,13 +223,55 @@ header {
   font-size: 1.5rem;
 }
 
-.results {
+#results {
+  color: #000;
   padding: 10px;
   font-size: 1.3rem;
-  /* background: #990000; */
-  min-height: 100px; /* Take note when implementing the "waiting" icon */
+  /*background: #990000;*/
+  min-height: 150px; /* Take note when implementing the "waiting" icon */
 }
 
 .pushed {
   margin-top: 20px;
+}
+
+.feedback-btn {
+  margin: 15px 10px 10px 5px;
+  width: 90%;
+  height: 45px;
+  border: 2px solid #3a34eb;
+  border-radius: 25px;
+  font-weight: bolder;
+  background: #2d74b3;
+}
+
+.feedback-btn a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.newsletter-intro {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-text {
+  text-align: center;
+  color: #999;
+}
+
+.bottom-links {
+  text-align: center;
+}
+
+.bottom-links a {
+  color: #999;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn-1 a {
+  color: #ffffff;
+  text-decoration: none;
 }

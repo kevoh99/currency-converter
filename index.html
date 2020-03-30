@@ -33,7 +33,17 @@
 
         <div class="container">
 
+            <h1 id="main-heading">Get the Exchange Rate of any Currency Anytime, Anywhere</h1>
+            <p class="main-text">Fill the form below to get up-to-date info on the currencies of your choice. You will not only get to know the amount you get in your desired currency, but also all the countries where the currency is accepted. </p>
+            <br /> <br />
             <form action="/request" method="POST">
+
+                <!--number field starts -->
+
+                <label for="cash-count" class="amount form-ctrl">Amount<br /></label><input type="number" name="cash-count" id="cash-count" class="form-ctrl" value="1">
+
+                <!--number field ends -->
+
                 <select name="currency-at-hand" id="currency-at-hand" class="form-ctrl">
                     <option disabled selected value="">Select currency you have</option>
                     <option value="AFN">Afghan afghani (AFN)</option>
@@ -92,7 +102,7 @@
                     <option value="GIP">Gibraltar Pound (GIP)</option>
                     <option value="GTQ">Guatemalan quetzal (GTQ)</option>
                     <option value="GGP">Guernsey Pound (GGP)</option>
-                    <option value="GNF">GuineaN Franc (GNF)</option>
+                    <option value="GNF">Guinean Franc (GNF)</option>
                     <option value="GYD">Guyanese Dollar (GYD)</option>
                     <option value="HTG">Haitian gourde (HTG)</option>
                     <option value="HNL">Honduran lempira (HNL)</option>
@@ -253,7 +263,7 @@
                     <option value="GIP">Gibraltar Pound (GIP)</option>
                     <option value="GTQ">Guatemalan quetzal (GTQ)</option>
                     <option value="GGP">Guernsey Pound (GGP)</option>
-                    <option value="GNF">GuineaN Franc (GNF)</option>
+                    <option value="GNF">Guinean Franc (GNF)</option>
                     <option value="GYD">Guyanese Dollar (GYD)</option>
                     <option value="HTG">Haitian gourde (HTG)</option>
                     <option value="HNL">Honduran lempira (HNL)</option>
@@ -356,53 +366,81 @@
                     <option value="YER">Yemeni rial (YER)</option>
                     <option value="ZMW">Zambian kwacha (ZMW)</option>
                 </select>
-                <button id="btn-1">Submit</button>
-            </form </div>
+                <button class="btn-1">Submit</button>
+            </form>
+        </div>
 
-            <!--another test start-->
-            <div class="container pushed">
+        <!--another test start-->
+        <div class="container pushed">
 
-                <div class="results">Currency data will appear here!! <br /> Hello tomorrow!!</div>
+            <div id="results">Currency data will appear here!!
+                <!--Actual implementation begins-->
+                &nbsp;
+                <!--Actual implementation ends-->
+
 
             </div>
 
-
-            <!--another test ends-->
         </div>
 
-        <div class="social">
-            <div class="container">
 
-                <h2>Connect with us</h2>
+        <!--another test ends-->
+    </div>
+
+    <div class="social">
+        <div class="container">
+
+            <h2>Connect with us</h2>
 
 
-                <div class="flexy">
+            <div class="flexy">
 
-                    <div class="one">
-                        <p class="rounded"><a href="#">fb</a></p>
-                    </div>
+                <div class="one">
+                    <p class="rounded"><a href="#">fb</a></p>
+                </div>
 
-                    <div class="two">
-                        <p class="rounded"><a href="#">t</a></p>
+                <div class="two">
+                    <p class="rounded"><a href="#">t</a></p>
 
-                    </div>
-                    <div class="three">
+                </div>
+                <div class="three">
 
-                        <p class="rounded"><a href="#">in</a>
-                        </p>
+                    <p class="rounded"><a href="#">in</a>
+                    </p>
 
-                    </div>
                 </div>
 
             </div>
+
+            <!--test begins -->
+            <h2 class="newsletter-intro">Receive Currencio rate alerts</h2>
+
+            <button class="btn-1"><a href="#">Sign up now</a></button>
+
+            <br />
+
+            <label for id="fdb"></label>
+            <button id="fdb" class="feedback-btn"><a href="#">FEEDBACK</a></button>
+
+            <!--test ends -->
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p class=footer-text>Copyright &copy; 2020. Currencio.com</p>
+            <p class="bottom-links">
+                <a href="#">FAQ</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Policy</a>
+
+                <a href="#">File a Complaint</a>
+            </p>
         </div>
 
-        <div class="footer">
-            <div class="container">
-                Copyright &copy; 2020. Currencio.com
-            </div>
-
-        </div>
+    </div>
 </body>
 
 </html>
