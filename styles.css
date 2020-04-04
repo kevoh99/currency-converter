@@ -1,277 +1,529 @@
-/* Global CSS */
+/*************************
+***** Global CSS**********
+*************************/
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-p {
-  line-height: 1.6;
-  max-width: 50ch;
-  margin: 5px 0 5px 6px;
+:root {
+  --main-color: #2d74b3;
+  --secondary-color: #e96c4c;
+  --main-bg-color: #eeeeee;
 }
 
 body {
-  color: #fff;
-  background: #eeeeee;
-  /* font: 16px/1.5 "Roboto" arial sans-serif; */
-  font-size: 16px;
-  line-height: 1.5;
+  margin: 0;
   font-family: "Roboto", sans-serif;
+  background-color: var(--main-bg-color);
+  font-size: 16px;
 }
 
-h1 h2 {
-  font-size: 2rem;
+p {
+  line-height: 1.5;
+  max-width: 50ch;
+  margin: 5px 0 5px 6px;
+  font-size: 1rem;
 }
 
 .container {
-  /* border: 1px solid #999; */
   width: 90%;
   margin: auto;
-  padding: 10px 5px;
-}
-
-.form-ctrl {
-  font-size: 1.3rem;
-  width: 90%;
+  padding: 5px;
+  /* border: 2px solid #cc0000; */
 }
 
 .flexy {
   display: flex;
 }
 
-#main-heading {
-  font-size: 1.5rem;
-  color: #000;
+.vertical {
+  flex-direction: column;
+}
+
+.form-ctrl {
+  font-size: 1rem;
+  height: 30px;
+  width: 90%;
+  border: 1px solid #999999;
+  border-radius: 5px;
+}
+.btn-1 {
+  height: 30px;
+  width: 50%;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+a {
+  color: #ffffff;
+}
+
+/*************************
+***** Header  ************
+*************************/
+
+.header {
+  background-color: var(--main-color);
+  padding-top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.header .container {
+  padding-top: 0;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header ul a {
+  display: block;
+  /* outline: 1px solid red; */
+  padding: 20px;
+  text-decoration: none;
+}
+
+header ul a:hover {
+  background-color: var(--secondary-color);
+  min-height: 100%;
+}
+
+.header .logo {
+  float: left;
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  /* outline: 1px solid red; */
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: #ffffff;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*************************
+***** Main Section *******
+*************************/
+
+main #main-heading {
+  font-size: 1.5 rem;
+  font-weight: bold;
   text-align: center;
-  /*background: #ff0;*/
-  margin: 10px 0 25px 0;
+  max-width: 60ch;
+  padding: 5px 5px 0 5px;
+  margin: 30px auto 2px auto;
+  color: #161616;
+  /* background: #e96c4c; */
+}
+
+main .sub-heading {
+  font-size: 1.3rem;
+  font-weight: regular;
+  text-align: center;
+  max-width: 50ch;
+  padding: 15px auto;
+  margin: 0 auto 3px auto;
+  /* background: orangered; */
 }
 
 .main-text {
-  color: #000;
+  /* background: #900; */
+  padding: 10px 20px;
+  margin: auto;
 }
 
-header {
-  border-bottom: 3px solid #e96c4c;
-  background: #2d74b3;
-  min-height: 60px;
+#main-form {
+  /* background: #c00; */
+  padding-left: 20px;
 }
-
-.main-sec {
-  /* background: #00ff00; */
-  /*background: url("https://www.beautyhealthplus.org/temp/trading-chart2.png")
-    no-repeat -200px 0px;*/
-  background: #b4c6f0;
-  min-height: 350px;
-}
-
-.social {
-  background: #2d74b3;
-  min-height: 100px;
-  padding-bottom: 30px;
-}
-
-.social h2 {
-  padding: 10px;
-}
-
-.footer {
-  /* background: #eb347d; */
-  /*background: #999;*/
-  background: #e96c4c;
-  background: #323232;
-  border-top: 1px solid #999999;
-  min-height: 50px;
-  font-size: smaller;
-  /* text-align: center; */
-}
-
-.branding {
+.first {
   flex: 1;
-}
-
-.branding h1 {
   /* background: #cc0000; */
-  margin-top: 10px;
-  padding: 3px 5px 27px 10px;
-  padding-left: 0;
-  color: #fff;
-}
-
-.navigation {
-  flex: 1.5;
-  /*background: #ccc;*/
-  padding: 5px 0;
-}
-
-.navigation ul {
-  padding: 15px 0px 15px 5px;
-  margin: 5px 0 2px 0;
-  /*background: #0000ff;*/
-  padding-bottom: 18px;
-}
-
-.navigation li {
-  display: inline;
-  color: #fff;
-  /*background: #ffff00;*/
   padding: 5px 5px;
-  font-weight: bold;
 }
 
-.navigation a {
+.second {
+  flex: 2;
+  /* background: palevioletred; */
+  padding: 1px 5px 3px 5px;
+}
+
+.third {
+  flex: 1;
+  /* background: lightskyblue; */
+  padding: 5px 5px;
+}
+
+.flexy1 {
+  flex: 1;
+  /* background: purple; */
+}
+
+.flexy2 {
+  flex: 1;
+  /* background: cyan; */
+}
+.amount {
+  font-size: 1rem;
+}
+
+#cash-count {
+  margin-bottom: 1px;
+  /* background-color: brown; */
+}
+
+#currency-at-hand {
+  margin-bottom: 7px;
+}
+
+#currency-desired {
+  margin-bottom: 3px;
+}
+
+#flexy-btn {
+  height: 30px;
+  width: 50%;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.results {
+  min-height: 30px;
+  padding-left: 30px;
+  margin: auto;
+}
+
+/*************************
+***** Social Section *******
+*************************/
+.social {
+  background: var(--main-color);
+  min-height: 200px;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.social-cont h2 {
+  font-size: 1.3rem;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.social-cont p {
+  text-align: center;
+  padding: 0;
+  position: relative;
+  /* background: yellow; */
+}
+
+.social-cont a {
   text-decoration: none;
-  color: #fff;
-  font-size: 18px;
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  font-weight: bold;
+  /* background: yellow; */
 }
 
-.rounded {
+.social-1,
+.social-2,
+.social-3 {
   width: 50px;
   height: 50px;
   border: 2px solid #ffffff /*#e96c4c*/;
   border-radius: 50%;
-  text-align: center;
-  padding-top: 6px;
-  margin-left: 15px;
-  margin-top: 10px;
+  margin: 10px;
 }
 
-.one {
-  /*background: #ff0;*/
+.social-flex-1 {
+  flex: 2;
+  /* background-color: aquamarine; */
+}
+
+.social-flex-2 {
   flex: 1;
-  color: #fff;
+  /* background: blueviolet; */
 }
 
-.one a {
-  color: #fff;
-  text-decoration: none;
-  font-size: larger;
-  font-weight: bold;
-}
-
-.two {
-  /*background: #f0f;*/
+.social-cont {
   flex: 1;
-  color: #fff;
+  /* background: red; */
 }
 
-.two a {
-  color: #fff;
-  text-decoration: none;
-  font-size: larger;
-  font-weight: bold;
-}
-
-.three {
-  /*background: #ff0;*/
+.newsletter-cont {
   flex: 1;
-  color: #fff;
+  /* background: purple; */
 }
 
-.three a {
-  color: #fff;
+.newsletter-cont h2 {
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+.social-1 {
+  float: left;
+}
+
+.social-2 {
+  float: left;
+}
+
+.social-3 {
+  float: left;
+}
+
+.newsletter-cont a {
   text-decoration: none;
-  font-size: larger;
-  font-weight: bold;
-}
-
-.amount {
-  /*background: #f0f;*/
-  padding: 0 10px;
-  margin-bottom: 0;
-  color: #000;
-}
-
-#cash-count {
-  margin: 0 10px 5px 5px;
-  padding: 5px;
-  border: none;
-  border-radius: 10px;
-  background: #ffffff;
-  /* background: #ff00ff; */
-}
-
-#currency-at-hand {
-  margin: 20px 10px 5px 5px;
-  margin: 3px 10px 5px 5px;
-  padding: 5px;
-  border: none;
-  border-radius: 10px;
-  background: #ffffff;
-  /* background: #ff00ff; */
-}
-
-#currency-desired {
-  margin: 3px 10px 5px 5px;
-  padding: 5px;
-  border: none;
-  border-radius: 10px;
-  background: #ffffff;
-  /*background: #ff00ff;*/
-}
-
-.btn-1 {
-  margin: 5px 10px 10px 5px;
-  width: 200px;
-  padding: 5px;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  background: #e96c4c;
-  font-size: 1.5rem;
-}
-
-#results {
-  color: #000;
-  padding: 10px;
-  font-size: 1.3rem;
-  /*background: #990000;*/
-  min-height: 150px; /* Take note when implementing the "waiting" icon */
-}
-
-.pushed {
-  margin-top: 20px;
 }
 
 .feedback-btn {
-  margin: 15px 10px 10px 5px;
+  margin: 15px 10px 10px 0px;
   width: 90%;
   height: 45px;
+  background-color: inherit;
   border: 2px solid #3a34eb;
   border-radius: 25px;
   font-weight: bolder;
-  background: #2d74b3;
 }
 
 .feedback-btn a {
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #fff;
+  color: #000000;
 }
 
-.newsletter-intro {
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
+/*************************
+***** Footer Section *******
+*************************/
 
-.footer-text {
+footer {
+  background: #333333;
+  color: #999999;
+  min-height: 50px;
+}
+footer p {
+  font-size: smaller;
   text-align: center;
-  color: #999;
 }
-
-.bottom-links {
-  text-align: center;
-}
-
-.bottom-links a {
-  color: #999;
+footer a {
   text-decoration: none;
-  margin-right: 10px;
+  color: #999999;
 }
 
-.btn-1 a {
-  color: #ffffff;
-  text-decoration: none;
+/********************************************************************************************************
+*************************************Responsive Design starts********************************************
+********************************************************************************************************/
+
+@media (min-width: 768px) {
+  /********************************************
+***** Responsive design for header section ****
+***********************************************/
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 25px 30px;
+  }
+  .header .menu {
+    clear: none; /*initially set to clear: both, thus pushing the menu below the left floated logo (mobile-first approach)*/
+    float: right;
+    max-height: none; /*initially toggled between 0 and 240px */
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+  /********************************************
+***** Responsive design for main section ****
+***********************************************/
+
+  main #main-heading {
+    font-size: 2.5rem;
+    /* max-width: 900px; */
+    padding: 15px 40px 5px 40px;
+    margin: 20px auto 0 auto;
+    /* background: orchid; */
+  }
+
+  main .sub-heading {
+    font-size: 2.3rem;
+    /* max-width: 980px; */
+    padding: 0 auto 15px auto;
+    margin: 0 auto;
+    /* background: orangered; */
+  }
+
+  main .main-text {
+    font-size: 1.5rem;
+  }
+
+  .adjusted {
+    width: 60%;
+    margin: auto;
+  }
+
+  /* .second {
+    flex: 1;
+    flex-direction: row;
+  } */
+
+  .flexy1 {
+    flex: 1;
+    /* background: #2d74b3; */
+  }
+
+  .flexy2 {
+    flex: 1;
+    /* background: #e96c4c; */
+  }
+  .amount {
+    font-size: 1.5rem;
+  }
+
+  #cash-count {
+    height: 40px;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  #currency-at-hand {
+    height: 40px;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  #currency-desired {
+    height: 40px;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  #flexy-btn {
+    height: 40px;
+    width: 50%;
+    font-size: 1.5rem;
+  }
+
+  .social-flex-1 {
+    flex-direction: row;
+  }
+
+  .social-cont h2 {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-cont h2 {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-cont .btn-1 {
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .feedback-btn a {
+    font-size: 1.5rem;
+  }
+
+  .copyright {
+    text-align: left;
+    float: left;
+  }
+
+  .bottom-links {
+    text-align: right;
+    float: right;
+    background: #333333;
+  }
+}
+
+@media (min-width: 650px) {
+  .social-flex-1 {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 950px) {
+  .second {
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .parent-social-flex {
+    flex-direction: row;
+  }
+
+  #cash-count {
+    width: 95%;
+  }
 }
