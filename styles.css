@@ -24,7 +24,6 @@ p {
 
 /* Make select elements and input elements the same width. 
 Credit: https://stackoverflow.com/questions/4073768/how-to-get-equal-width-of-input-and-select-fields */
-textarea, /* textarea Added as an experiment for textarea field. Remove if it doesn't work */
 input,
 select {
   -webkit-box-sizing: border-box;
