@@ -1,4 +1,8 @@
-function getInputValue () {
+document.getElementById('flexy-btn').addEventListener('click', function () {
+  document.getElementById('results').innerHTML = 'Hello World'
+})
+/* Start of working troubleshhoot code that works along with  onclick="getInputValue()" added to the button in the html  */
+/* function getInputValue () {
   // Selecting the input element and get its value
   let inputVal = document.getElementById('currency-at-hand').value
   let inputVal2 = document.getElementById('currency-desired').value
@@ -8,7 +12,8 @@ function getInputValue () {
   console.log(inputVal2)
   window.alert(inputVal)
 }
-getInputValue()
+getInputValue() */
+/* End of working troubleshoot */
 
 /* document.getElementById('main-body').onload = function () {
   document.getElementById('main-form').onsubmit = function () {

@@ -269,10 +269,11 @@ main .sub-heading {
   cursor: pointer;
 }
 
-.results {
+#results {
   min-height: 30px;
   padding-left: 30px;
   margin: auto;
+  font-size: 1.5rem;
 }
 
 /*************************
