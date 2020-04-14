@@ -1,3 +1,15 @@
+function getInputValue () {
+  // Selecting the input element and get its value
+  let inputVal = document.getElementById('currency-at-hand').value
+  let inputVal2 = document.getElementById('currency-desired').value
+
+  // Displaying the value
+  console.log(inputVal)
+  console.log(inputVal2)
+  window.alert(inputVal)
+}
+getInputValue()
+
 /* document.getElementById('main-body').onload = function () {
   document.getElementById('main-form').onsubmit = function () {
     let temp1 = document.getElementById('currency-at-hand')
