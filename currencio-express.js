@@ -1,3 +1,11 @@
+/* This is a brainstorm / experiment for including the modules into an express project */
+// The Main express app.js file will require this file as a dependency
+// It will then extract form details e.g amount, fromcurency and tocurrency and call the functions herein with them
+/* Useful links
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction and https://www.sitepoint.com/understanding-module-exports-exports-node-js/
+*/
+// The latter showed the method that worked and removed terminal errors; having the exports statements at the bottom
+
 const axios = require('axios')
 
 // const getExchangeRate = async (fromCurrency, toCurrency) => {
@@ -42,7 +50,7 @@ const convertCurrency = async (currencyData) => {
   return `${currencyData.amount} ${currencyData.fromCurrency} is worth ${convertedAmount} ${currencyData.toCurrency}. You can spend the cash in the following countries: ${countries}`
 }
 
-let currencyData = {
+/* let currencyData = {
   fromCurrency: 'USD', // on real website, this would come from user input in the form
   toCurrency: 'GBP', // on real website, this would come from user input in the form
   amount: 10000 // on real website, this would come from user input in the form
@@ -52,4 +60,8 @@ convertCurrency(currencyData)
     console.log(message)
   }).catch((error) => {
     console.log(error.message)
-  })
+  }) */
+
+exports.getExchangeRate = getExchangeRate
+exports.getCountries = getCountries
+exports.convertCurrency = convertCurrency

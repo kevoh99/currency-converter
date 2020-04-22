@@ -1,0 +1,95 @@
+@media (max-width: 450px) {
+  /* Add line break to main paragraph on mobile devices */
+  .break-point::after {
+    content: "\a";
+    white-space: pre;
+  }
+
+  #social h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 450px) {
+  #main .container h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Start of test */
+@media (min-width: 550px) {
+  #social .container {
+    padding: 1rem;
+    min-width: 100%;
+    margin-top: 0;
+  }
+
+  .social-flex-1 {
+    flex-direction: row;
+    padding: 0 0 0 0rem;
+    /* background: yellow; */
+    margin-bottom: 0;
+  }
+
+  .social-cont {
+    /* background: blue; */
+    /* padding: 1rem 0.5rem; */
+    padding: 1rem 0;
+    margin-bottom: 0;
+  }
+
+  .newsletter-cont {
+    /* background: red; */
+    padding: 1rem;
+    margin-bottom: 0;
+  }
+
+  .social-flex-2 {
+    /* background: cyan; */
+    padding: 0;
+  }
+}
+
+/* End of test */
+
+@media (min-width: 768px) {
+  /* Main section */
+  #social .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    justify-content: space-around;
+  }
+
+  #main .container h2 {
+    font-size: 2.2rem;
+  }
+  .div-2 {
+    flex-direction: row;
+  }
+
+  #currency_at_hand,
+  #currency_desired {
+    width: 95%;
+  }
+
+  .flexy_2 {
+    text-align: right;
+  }
+
+  /* Social section */
+
+  #social .container {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 880px) {
+  #header li a {
+    padding: 20px 30px;
+  }
+
+  #social .container {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}

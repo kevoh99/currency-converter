@@ -4,48 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/586daf0d9e.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-responsive.css">
-    <title>Responsive Menu with Pure CSS</title>
+    <title>Currency Converter | Currencio</title>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header id="header">
+    <!--header begins-->
+    <header class="header">
         <div class="container">
             <a href="/" class="logo">Currencio</a>
-
-            <input class="menu-btn" type="checkbox" id="menu-btn">
-            <label for="menu-btn" class="menu-icon">
-                <span class="nav-icon"></span>
-            </label>
-            <ul class="menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#quote">Quote</a></li>
-            </ul>
+            <div>
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
-
-    <!-- Main Section -->
-    <main id="main">
+    <br><br><br>
+    <!-- Main section begins -->
+    <main class="main-sec">
         <div class="container">
-            <h2>Get the Exchange Rate of Any Currency</h2>
-            <p> <span class="break-point"> Fill the form below to convert between any currencies of your choice.</span> Know the amount you get in your desired currency as well as the countries in which the currency is accepted. </p>
-            <!-- test begins -->
-            <form action="/" id="test-form" method="POST">
-                <div class="container">
-
-                    <div class="div-1">
-                        <label for="cash_count" class="amount hidden"> Amount</label>
+            <h1 id="main-heading">Get the Exchange Rate of any Currency</h1>
+            <h2 class="sub-heading">It is 100% free and easy to use</h2>
+            <p class="main-text">Fill the form below to get up-to-date info on the currencies of your choice. You will not only get to know the amount you get in your desired currency, but also a list of countries where the currency is accepted. </p>
+            <form id="main-form" class="adjusted" action="/request" method="POST">
+                <!--number field starts -->
+                <div class="flexy vertical">
+                    <div class="first">
+                        <label for="cash_count" class="amount"> Amount</label>
+                        <br />
                         <input type="number" name="cash_count" id="cash_count" class="form-ctrl" value="1">
                     </div>
-
-                    <div class="div-2">
-                        <div class="flexy_1">
+                    <!--number field ends -->
+                    <div class="second flexy vertical">
+                        <div class="flexy1">
                             <select name="currency_at_hand" id="currency_at_hand" class="form-ctrl">
                                 <option disabled selected value="">Currency you have</option>
                                 <option value="USD">United States Dollar (USD)</option>
@@ -212,7 +210,7 @@
                                 <option value="YER">Yemeni rial (YER)</option>
                                 <option value="ZMW">Zambian kwacha (ZMW)</option>
                             </select></div>
-                        <div class="flexy_2">
+                        <div class="flexy2">
                             <select name="currency_desired" id="currency_desired" class="form-ctrl">
                                 <option disabled selected value="">Currency you want</option>
                                 <option value="USD">United States Dollar (USD)</option>
@@ -380,64 +378,59 @@
                                 <option value="ZMW">Zambian kwacha (ZMW)</option>
                             </select></div>
                     </div>
-
-                    <div class="div-3">
-                        <input class="form-ctrl btn" type="submit" value="Submit">
-                    </div>
-
+                    <div class="third"><button id="flexy-btn">Submit</button></div>
                 </div>
             </form>
-            <!-- test ends -->
+            <p id="results">Currency data will appear here</p>
         </div>
     </main>
-
-    <!-- Social Section -->
-    <section id="social">
+    <!--Social Section begins-->
+    <div class="social">
         <div class="container">
-            <div class="social-flex-1">
+            <div class="parent-social-flex flexy vertical">
+                <div class="social-flex-1 flexy vertical">
 
-                <div class="social-cont">
-                    <h2>Connect with Us</h2>
-                    <div>
-                        <a href="http://twitter.com">
-                            <i class="fab fa-twitter fa-2x"></i>
-                        </a>
-                        <a href="http://facebook.com">
-                            <i class="fab fa-facebook fa-2x"></i>
-                        </a>
-                        <a href="http://youtube.com">
-                            <i class="fab fa-youtube fa-2x"></i>
-                        </a>
+                    <div class="social-cont">
+                        <h2>Connect with Us</h2>
+                        <div class="social-1">
+                            <p><a href="#">fb</a></p>
+                        </div>
+                        <div class="social-2">
+                            <p><a href="#">t</a></p>
+                        </div>
+                        <div class="social-3">
+                            <p><a href="#">in</a></p>
+                        </div>
                     </div>
+
+                    <div class="newsletter-cont">
+                        <h2>Receive Currencio Rate Alerts</h2>
+                        <button class="btn-1"><a href="#">Sign up Now</a></button>
+                    </div>
+
                 </div>
-
-                <div class="newsletter-cont">
-                    <h2>Receive Free Rate Alerts</h2>
-                    <!-- <button class="btn-1"><a href="#">Sign up Now</a></button> -->
-                    <a class="btn-1" href="#">Sign Up</a>
+                <div class="social-flex-2">
+                    <label for id="fdb"></label>
+                    <button id="fdb" class="feedback-btn"><a href="#">FEEDBACK</a></button>
                 </div>
-
-            </div>
-
-            <div class="social-flex-2">
-                <button class="feedback-btn"><a href="#" target="_blank">FEEDBACK <i class="fas fa-external-link-alt"></i></a></button>
             </div>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="footer">
+    </div>
+    <!--Footer begins-->
+    <footer class="footer">
         <div class="container">
             <p class="copyright">Copyright &copy; 2020. Currencio.com</p>
             <p class="bottom-links">
-                <a href="#">FAQ</a> |
-                <a href="#">Sitemap</a> |
-                <a href="#">Privacy</a> |
-                <a href="#">Cookie Policy</a> |
+                <a href="#">FAQ</a>
+                <a href="#">Sitemap</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Policy</a>
                 <a href="#">File a Complaint</a>
             </p>
         </div>
     </footer>
+
+    <script src="action.js"></script>
 </body>
 
 </html>
