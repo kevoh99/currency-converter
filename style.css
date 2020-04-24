@@ -113,7 +113,6 @@ Start of hamburger menu design
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
-  /* background: yellow; */
 }
 
 /* Checkbox's label element */
@@ -124,7 +123,7 @@ Start of hamburger menu design
   cursor: pointer;
 }
 
-/* The actual text in checkbox's label, nested in a span element */
+/* Actual content in checkbox's label, nested in a span element */
 #header .menu-icon .nav-icon {
   background: var(--primary-color);
   display: block;
@@ -160,7 +159,8 @@ Start of hamburger menu design
   display: none;
 }
 
-/* ~ selector looks for a sibling that meets the specified criteria, in this case, one with a class of .menu*/
+/* ~ selector looks for a sibling that meets the specified criteria, 
+in this case, one with a class of .menu */
 #header .menu-btn:checked ~ .menu {
   max-height: 240px; /* Previously set to 0 to make it disappear */
 }
@@ -195,7 +195,8 @@ Start of hamburger menu design
   #header .menu {
     clear: none; /* Initially set to clear: both */
     float: right;
-    max-height: none; /* Initially toggled between 0 and 240 for unchecked and checked state of the checkbox respectively */
+    max-height: none; /* Initially toggled between 0 and 240 for unchecked 
+    and checked state of the checkbox respectively */
   }
 
   #header .menu-icon {
@@ -213,7 +214,8 @@ End of hamburger menu design
 *****************************/
 
 #header .container {
-  min-width: 100%; /* Overwrite default max-width: 100% to ensure header doesn't change in dimensions */
+  min-width: 100%; /* Overwrite default max-width: 100% to ensure header 
+  doesn't change in dimensions */
   padding: 0 1rem;
   margin-top: 0;
 }
@@ -237,33 +239,13 @@ End of hamburger menu design
   margin-bottom: 1rem;
 }
 
-/**********************************************************************************
-*******************************************Start of test form *********************
-**********************************************************************************/
-/* #test-form {
-  background: chartreuse;
-  min-height: 300px;
-} */
-
-#test-form .container {
+#main-form .container {
   padding: 0;
   margin-top: 0;
   display: flex;
   flex-direction: column;
 }
-/* 
-#test-form > div > div:first-child {
-  background: chocolate;
-}
 
-#test-form > div > div:nth-child(2) {
-  background: lightskyblue;
-}
-
-#test-form > div > div:last-child {
-  background: violet;
-}
- */
 .div-1,
 .div-3 {
   flex: 1;
@@ -275,6 +257,10 @@ End of hamburger menu design
   padding: 0rem 0.1rem;
   display: flex;
   flex-direction: column;
+}
+
+.div-3 {
+  padding-top: 1rem;
 }
 
 .flexy_1 {
@@ -316,7 +302,63 @@ End of hamburger menu design
   display: inline-block;
 }
 
-.btn-1 {
+/****************************************
+***** Section  B*******************
+****************************************/
+
+#section-b {
+  background: #5c6670;
+  border-top: 5px solid var(--primary-color);
+  margin-top: 2rem;
+}
+
+#section-b .container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem; /* Override default 0 2rem */
+
+  margin-top: 0; /* Override default 1rem */
+}
+
+#section-b h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.b-flex-1 {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.b-flex-2 {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.b-social-cont {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.b-social-cont a > i {
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.b-social-cont a:hover > i {
+  color: var(--primary-color);
+}
+
+.b-newsletter-cont {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.b-newsletter-cont a:hover {
+  background: var(--primary-color);
+}
+
+.b-newsletter-btn {
   display: inline-block;
   background: var(--secondary-color);
   color: #ffffff;
@@ -329,93 +371,6 @@ End of hamburger menu design
   border-radius: 3px;
 }
 
-/**********************************************************************************
-*******************************************End of test form *********************
-**********************************************************************************/
-
-/****************************************
-***** Social Section  *******************
-****************************************/
-#social {
-  background: #5c6670;
-  border-top: 5px solid var(--primary-color);
-  margin-bottom: 0;
-  margin-top: 2rem;
-}
-
-#social .container {
-  margin-bottom: 0;
-  padding-bottom: 1rem;
-  /* border: 1px solid red; */
-  display: flex;
-  flex-direction: column;
-}
-
-.social-flex-1 {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  /* background: red; */
-  margin-top: 0.5rem;
-}
-
-.social-flex-2 {
-  flex: 1;
-  /* background: violet; */
-  margin-top: 0.5rem;
-}
-
-#social h2 {
-  color: #fff;
-}
-
-.social-cont {
-  margin-bottom: 1rem;
-  flex: 1;
-}
-
-.social-cont h2 {
-  margin-bottom: 1rem;
-}
-
-.social-cont a > i {
-  color: #fff;
-  margin-right: 0.5rem;
-}
-
-.social-cont > div > a:first-child:hover > i {
-  color: var(--primary-color);
-  color: #1da1f2;
-  background: #fff;
-  border-radius: 3px;
-}
-
-.social-cont > div > a:nth-child(2):hover > i {
-  color: #3b5998;
-  background: #fff;
-  border-radius: 3px;
-}
-
-.social-cont > div > a:last-child:hover > i {
-  color: #c4302b;
-  background: #fff;
-}
-
-.newsletter-cont {
-  flex: 1;
-  margin-bottom: 1rem;
-}
-.newsletter-cont h2 {
-  margin-bottom: 1rem;
-}
-.newsletter-cont a {
-  color: #fff;
-}
-
-.newsletter-cont a:hover {
-  background: var(--primary-color);
-}
-
 .feedback-btn {
   border: 3px solid var(--primary-color);
   border-radius: 25px;
@@ -423,7 +378,6 @@ End of hamburger menu design
   width: 100%;
   height: 3rem;
   margin-top: 1rem;
-  /* position: relative; */
 }
 
 .feedback-btn a {
@@ -434,9 +388,6 @@ End of hamburger menu design
 }
 
 .feedback-btn a > i {
-  /* position: absolute;
-  top: 10px;
-  right: 25px; */
   color: rgba(255, 255, 255, 0.7);
   margin-left: 0.5rem;
 }

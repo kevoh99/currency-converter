@@ -5,7 +5,7 @@
     white-space: pre;
   }
 
-  #social h2 {
+  #section-b h2 {
     font-size: 1.5rem;
   }
 }
@@ -16,36 +16,11 @@
   }
 }
 
-/* Start of test */
-@media (min-width: 550px) {
-  #social .container {
-    padding: 1rem;
-    min-width: 100%;
-    margin-top: 0;
-  }
-
-  .social-flex-1 {
+@media (min-width: 560px) {
+  /* Section B */
+  .b-flex-1 {
     flex-direction: row;
-    padding: 0 0 0 0rem;
-    /* background: yellow; */
-    margin-bottom: 0;
-  }
-
-  .social-cont {
-    /* background: blue; */
-    padding: 1rem 0;
-    margin-bottom: 0;
-  }
-
-  .newsletter-cont {
-    /* background: red; */
-    padding: 1rem 0;
-    margin-bottom: 0;
-  }
-
-  .social-flex-2 {
-    /* background: cyan; */
-    padding: 0 0 0 0.5rem;
+    flex: 1;
   }
 }
 
@@ -53,15 +28,10 @@
 
 @media (min-width: 768px) {
   /* Main section */
-  #social .container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    justify-content: space-between;
-  }
-
   #main .container h2 {
     font-size: 2.2rem;
   }
+
   .div-2 {
     flex-direction: row;
   }
@@ -75,10 +45,8 @@
     text-align: right;
   }
 
-  /* Social section */
-
-  #social .container {
-    flex-direction: row;
+  #section-b .container {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -87,8 +55,16 @@
     padding: 20px 30px;
   }
 
-  #social .container {
-    padding-right: 5rem;
-    padding-left: 5rem;
+  /* Section B */
+  #section-b .container {
+    flex-direction: row;
+  }
+
+  .b-flex-1 {
+    flex: 3;
+  }
+
+  .b-flex-2 {
+    flex: 1;
   }
 }
